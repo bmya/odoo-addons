@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: odoo-addons (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 23:57+0000\n"
-"PO-Revision-Date: 2015-09-09 23:58+0000\n"
+"POT-Creation-Date: 2015-10-22 13:44+0000\n"
+"PO-Revision-Date: 2015-10-08 15:13+0000\n"
 "Last-Translator: Juan Jose Scarafia <scarafia.juanjose@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/adhoc/ingadhoc-odoo-addons-8-0/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -66,15 +66,24 @@ msgstr "Bütün çek/senetler aynı firmadan olmalıdır!"
 
 #. module: account_check
 #: field:account.check,amount:0
+#: code:addons/account_check/models/account_voucher.py:45
+#, python-format
 msgid "Amount"
 msgstr "Tutar"
 
 #. module: account_check
-#: field:account.check,bank_id:0
+#: code:addons/account_check/models/account_voucher.py:48
+#, python-format
+msgid "Amount Paid With Checks"
+msgstr ""
+
+#. module: account_check
+#: field:account.change.check,bank_id:0 field:account.check,bank_id:0
 msgid "Bank"
 msgstr "Banka"
 
 #. module: account_check
+#: view:account.change.check:account_check.account_change_check_form_view
 #: selection:account.check,state:0
 msgid "Cancel"
 msgstr "İptal"
@@ -95,6 +104,27 @@ msgid "Cancel Rejection"
 msgstr "Karşılıksız İptal"
 
 #. module: account_check
+#: view:account.check:account_check.view_account_check_form
+msgid "Cancel Return"
+msgstr ""
+
+#. module: account_check
+#: view:account.check:account_check.view_account_check_form
+msgid "Change"
+msgstr ""
+
+#. module: account_check
+#: view:account.change.check:account_check.account_change_check_form_view
+#: model:ir.actions.act_window,name:account_check.action_account_change_check
+msgid "Change Check"
+msgstr ""
+
+#. module: account_check
+#: selection:account.check,state:0
+msgid "Changed"
+msgstr ""
+
+#. module: account_check
 #: model:ir.actions.act_window,name:account_check.action_check_debit
 msgid "Check Debit"
 msgstr "Ödeme"
@@ -106,17 +136,12 @@ msgstr "Bankaya Ver"
 
 #. module: account_check
 #: constraint:account.check:0
-msgid "Check Number Must be in Checkbook interval!"
-msgstr ""
-
-#. module: account_check
-#: constraint:account.check:0
 msgid "Check Number must be unique per Checkbook!"
 msgstr "Çek/Senet numarası çek/senet defterinde tekil olmalıdır!"
 
 #. module: account_check
 #: constraint:account.check:0
-msgid "Check Number must be unique per Customer and Bank!"
+msgid "Check Number must be unique per Owner and Bank!"
 msgstr ""
 
 #. module: account_check
@@ -125,11 +150,16 @@ msgid "Check Rejected"
 msgstr "Karşılıksız"
 
 #. module: account_check
-#: code:addons/account_check/wizard/check_reject.py:118
-#: code:addons/account_check/wizard/check_reject.py:153
+#: code:addons/account_check/wizard/check_reject.py:125
+#: code:addons/account_check/wizard/check_reject.py:170
 #, python-format
 msgid "Check Rejected N: "
 msgstr "Karşılıksız Çek/Senet No:"
+
+#. module: account_check
+#: model:ir.actions.act_window,name:account_check.action_check_return
+msgid "Check Return"
+msgstr ""
 
 #. module: account_check
 #: field:account.check.dreject,state:0
@@ -137,11 +167,12 @@ msgid "Check State"
 msgstr "Çek/Senet Durumu"
 
 #. module: account_check
-#: field:account.check.dreject,type:0 field:account.journal,check_type:0
+#: field:account.check.dreject,type:0
 msgid "Check Type"
 msgstr "Çek/Senet Tipi"
 
 #. module: account_check
+#: field:account.change.check,checkbook_id:0
 #: field:account.check,checkbook_id:0
 msgid "Checkbook"
 msgstr "Çek/Senet Defteri"
@@ -163,13 +194,9 @@ msgstr "Çek/Senet Defterleri"
 #: view:account.check:account_check.view_checks_search
 #: view:account.voucher:account_check.view_vendor_payment_check_form
 #: view:account.voucher:account_check.view_vendor_receipt_check_form
+#: view:account.voucher:account_check.view_vendor_receipt_dialog_form
 msgid "Checks"
 msgstr "Çek/Senetler"
-
-#. module: account_check
-#: help:account.check,type:0 help:account.journal,check_type:0
-msgid "Choose check type, if none check journal then keep it empty."
-msgstr ""
 
 #. module: account_check
 #: field:account.check,clearing:0
@@ -194,14 +221,21 @@ msgid "Company related to this journal"
 msgstr "Bu yevmiyeyle ilgili firma"
 
 #. module: account_check
-#: field:account.check,create_uid:0 field:account.check.action,create_uid:0
+#: view:account.change.check:account_check.account_change_check_form_view
+msgid "Confirm"
+msgstr ""
+
+#. module: account_check
+#: field:account.change.check,create_uid:0 field:account.check,create_uid:0
+#: field:account.check.action,create_uid:0
 #: field:account.check.dreject,create_uid:0
 #: field:account.checkbook,create_uid:0
 msgid "Created by"
 msgstr "Tarafından Oluşturuldu"
 
 #. module: account_check
-#: field:account.check,create_date:0 field:account.check.action,create_date:0
+#: field:account.change.check,create_date:0 field:account.check,create_date:0
+#: field:account.check.action,create_date:0
 #: field:account.check.dreject,create_date:0
 #: field:account.checkbook,create_date:0
 msgid "Created on"
@@ -218,10 +252,20 @@ msgid "Customer Reject Debit Note"
 msgstr "Müşteri Karşılıksız Ödeme Notu"
 
 #. module: account_check
+#: field:account.check.action,date:0
+msgid "Date"
+msgstr ""
+
+#. module: account_check
 #: help:account.check,message_last_post:0
 #: help:account.checkbook,message_last_post:0
 msgid "Date of the last message posted on the record."
 msgstr "Kayıta işlenmiş son mesajın tarihi."
+
+#. module: account_check
+#: view:account.check:account_check.view_account_check_form
+msgid "Debit"
+msgstr ""
 
 #. module: account_check
 #: field:account.check,debit_account_move_id:0
@@ -229,15 +273,10 @@ msgid "Debit Account Move"
 msgstr "Ödeme Muhasebe Hareketi"
 
 #. module: account_check
-#: code:addons/account_check/wizard/check_action.py:78
+#: code:addons/account_check/wizard/check_action.py:135
 #, python-format
 msgid "Debit Check Nr. "
 msgstr "Ödenen Çek/Senet No."
-
-#. module: account_check
-#: field:account.check.action,date:0
-msgid "Debit Date"
-msgstr ""
 
 #. module: account_check
 #: field:account.checkbook,debit_journal_id:0
@@ -245,7 +284,6 @@ msgid "Debit Journal"
 msgstr "Ödeme Yevmiyesi"
 
 #. module: account_check
-#: view:account.check:account_check.view_account_check_form
 #: selection:account.check,state:0
 msgid "Debited"
 msgstr "Ödendi"
@@ -256,17 +294,12 @@ msgid "Deferred"
 msgstr "Vadeli"
 
 #. module: account_check
-#: field:account.check,deposit_account_id:0
-msgid "Deposit Account"
-msgstr ""
-
-#. module: account_check
 #: field:account.check,deposit_account_move_id:0
 msgid "Deposit Account Move"
 msgstr "Bankaya Verme Muhasebe Hareketi"
 
 #. module: account_check
-#: code:addons/account_check/wizard/check_action.py:69
+#: code:addons/account_check/wizard/check_action.py:127
 #, python-format
 msgid "Deposit Check Nr. "
 msgstr "Bankaya Verilen Çek/Senet No."
@@ -278,6 +311,8 @@ msgid "Deposited"
 msgstr "Bankaya Verildi"
 
 #. module: account_check
+#: view:account.check:account_check.view_account_check_tree
+#: view:account.check:account_check.view_checks_search
 #: field:account.check,destiny_partner_id:0
 msgid "Destiny Partner"
 msgstr "Verilen İş Ortağı"
@@ -286,12 +321,6 @@ msgstr "Verilen İş Ortağı"
 #: selection:account.check,state:0 selection:account.checkbook,state:0
 msgid "Draft"
 msgstr "Taslak"
-
-#. module: account_check
-#: code:addons/account_check/models/account_check.py:229
-#, python-format
-msgid "Error !"
-msgstr ""
 
 #. module: account_check
 #: field:account.check.dreject,expense_account:0
@@ -353,15 +382,11 @@ msgid ""
 msgstr "Sohbetçi özeti (mesaj sayısı, ...) barındırır. Bu özetdoğrudan html formatında sipariş kanban görünümlerinde eklenecek."
 
 #. module: account_check
-#: field:account.check,id:0 field:account.check.action,id:0
-#: field:account.check.dreject,id:0 field:account.checkbook,id:0
+#: field:account.change.check,id:0 field:account.check,id:0
+#: field:account.check.action,id:0 field:account.check.dreject,id:0
+#: field:account.checkbook,id:0
 msgid "ID"
 msgstr "ID"
-
-#. module: account_check
-#: help:account.journal,validate_only_checks:0
-msgid "If True, voucher amount must be sum of checks amounts."
-msgstr ""
 
 #. module: account_check
 #: help:account.check,message_unread:0 help:account.checkbook,message_unread:0
@@ -386,8 +411,9 @@ msgid "Is a Follower"
 msgstr "Takip ediyor"
 
 #. module: account_check
-#: selection:account.journal,check_type:0
-msgid "Issue"
+#: code:addons/account_check/models/account.py:21
+#, python-format
+msgid "Issue Check"
 msgstr ""
 
 #. module: account_check
@@ -403,6 +429,7 @@ msgid "Issue Checks"
 msgstr "Verilen Çek/Senetler"
 
 #. module: account_check
+#: field:account.change.check,issue_date:0
 #: view:account.check:account_check.view_checks_search
 #: field:account.check,issue_date:0
 msgid "Issue Date"
@@ -420,13 +447,14 @@ msgstr "Çeki/senedi ödemek için kullanılacak (It will be used to make the de
 
 #. module: account_check
 #: view:account.check:account_check.view_checks_search
-#: field:account.check,journal_id:0 field:account.checkbook,journal_id:0
+#: field:account.check,journal_id:0 field:account.check.action,journal_id:0
+#: field:account.checkbook,journal_id:0
 #: model:ir.model,name:account_check.model_account_journal
 msgid "Journal"
 msgstr "Yevmiye"
 
 #. module: account_check
-#: code:addons/account_check/models/account_checkbook.py:96
+#: code:addons/account_check/models/account_checkbook.py:108
 #, python-format
 msgid "Journal And Debit Journal must belong to the same company"
 msgstr "Yevmiye ve Ödeme Yevmiyesi aynı firmaya ait olmalıdır"
@@ -443,13 +471,15 @@ msgid "Last Message Date"
 msgstr "Son Mesaj Tarihi"
 
 #. module: account_check
-#: field:account.check,write_uid:0 field:account.check.action,write_uid:0
+#: field:account.change.check,write_uid:0 field:account.check,write_uid:0
+#: field:account.check.action,write_uid:0
 #: field:account.check.dreject,write_uid:0 field:account.checkbook,write_uid:0
 msgid "Last Updated by"
 msgstr "Tarafından Güncellendi"
 
 #. module: account_check
-#: field:account.check,write_date:0 field:account.check.action,write_date:0
+#: field:account.change.check,write_date:0 field:account.check,write_date:0
+#: field:account.check.action,write_date:0
 #: field:account.check.dreject,write_date:0
 #: field:account.checkbook,write_date:0
 msgid "Last Updated on"
@@ -471,13 +501,32 @@ msgid "Name"
 msgstr "Adı"
 
 #. module: account_check
-#: code:addons/account_check/wizard/check_reject.py:114
+#: code:addons/account_check/models/account_checkbook.py:61
+#, python-format
+msgid "Next Check Number"
+msgstr ""
+
+#. module: account_check
+#: code:addons/account_check/wizard/check_reject.py:122
 #, python-format
 msgid "No journal for rejection in company %s"
 msgstr "Lütfen \"%s\" firması için satış yevmiyesi tanımlayınız."
 
 #. module: account_check
+#: code:addons/account_check/wizard/check_action.py:121
+#: code:addons/account_check/wizard/check_reject.py:164
+#, python-format
+msgid "Not period found for this date"
+msgstr ""
+
+#. module: account_check
+#: field:account.change.check,number:0
+#: view:account.check:account_check.view_account_check_create_tree
+#: view:account.check:account_check.view_account_check_tree
 #: field:account.check,number:0
+#: code:addons/account_check/models/account_check.py:65
+#: code:addons/account_check/models/account_check.py:68
+#, python-format
 msgid "Number"
 msgstr "Numarası"
 
@@ -487,35 +536,46 @@ msgid "Number Padding"
 msgstr "Dolgu Adedi"
 
 #. module: account_check
-#: field:account.journal,validate_only_checks:0
-msgid "Only Checks?"
-msgstr ""
-
-#. module: account_check
-#: code:addons/account_check/wizard/check_reject.py:54
+#: code:addons/account_check/wizard/check_reject.py:60
 #, python-format
 msgid "Only deposited or handed checks can be rejected."
 msgstr "Sadece bankaya verilen ve cirolanmış çek/senetler karşılıksız yapılabilir"
 
 #. module: account_check
-#: help:account.check,payment_date:0
+#: help:account.change.check,payment_date:0 help:account.check,payment_date:0
 msgid "Only if this check is post dated"
 msgstr "Sadece çek/senet vadeliyse doldurun"
 
 #. module: account_check
-#: code:addons/account_check/models/account_checkbook.py:89
+#: field:account.change.check,original_check_id:0
+msgid "Original Check"
+msgstr ""
+
+#. module: account_check
+#: field:account.change.check,owner_name:0 field:account.check,owner_name:0
+msgid "Owner Name"
+msgstr ""
+
+#. module: account_check
+#: field:account.change.check,vat:0 field:account.check,vat:0
+msgid "Owner Vat"
+msgstr ""
+
+#. module: account_check
+#: code:addons/account_check/models/account_checkbook.py:101
 #, python-format
 msgid "Padding must be lower than 32"
 msgstr "Dolgu adedi 32'den az olmalıdır"
 
 #. module: account_check
+#: field:account.change.check,payment_date:0
 #: view:account.check:account_check.view_checks_search
 #: field:account.check,payment_date:0
 msgid "Payment Date"
 msgstr "Vade Tarihi"
 
 #. module: account_check
-#: code:addons/account_check/models/account_check.py:230
+#: code:addons/account_check/models/account_check.py:309
 #, python-format
 msgid "Payment Date must be greater than Issue Date"
 msgstr "Vade Tarihi Verilme Tarihinden sonra olmalıdır"
@@ -532,24 +592,28 @@ msgid "Range to must be greater than range from"
 msgstr "Bitiş numarası başlangıç numarasından sonra olmalıdır"
 
 #. module: account_check
+#: view:account.check:account_check.view_account_check_form
+msgid "Reject"
+msgstr ""
+
+#. module: account_check
 #: field:account.check.dreject,reject_date:0
 msgid "Reject Date"
 msgstr "Karşılıksız Tarihi"
 
 #. module: account_check
-#: view:account.check:account_check.view_account_check_form
 #: selection:account.check,state:0
 msgid "Rejected"
 msgstr "Karşılıksız"
 
 #. module: account_check
-#: code:addons/account_check/wizard/check_reject.py:160
+#: code:addons/account_check/wizard/check_reject.py:177
 #, python-format
 msgid "Rejected Check Nr. "
 msgstr "Karşılıksız Çek/Senet No."
 
 #. module: account_check
-#: code:addons/account_check/wizard/check_reject.py:76
+#: code:addons/account_check/wizard/check_reject.py:82
 #, python-format
 msgid "Rejected Expenses, Check N: "
 msgstr "Karşılıksız Masrafları, Çek/Senet No:"
@@ -560,6 +624,35 @@ msgid "Related Documents"
 msgstr "İlgili Belgeler"
 
 #. module: account_check
+#: field:account.check,replacing_check_id:0
+msgid "Replacing Check"
+msgstr ""
+
+#. module: account_check
+#: view:account.check:account_check.view_account_check_form
+msgid "Return"
+msgstr ""
+
+#. module: account_check
+#: field:account.check,return_account_move_id:0
+msgid "Return Account Move"
+msgstr ""
+
+#. module: account_check
+#: code:addons/account_check/wizard/check_action.py:143
+#, python-format
+msgid "Return Check Nr. "
+msgstr ""
+
+#. module: account_check
+#: selection:account.check,state:0
+msgid "Returned"
+msgstr ""
+
+#. module: account_check
+#: view:account.check:account_check.view_account_check_create_tree
+#: view:account.check:account_check.view_account_check_tree
+#: view:account.check:account_check.view_checks_search
 #: field:account.check,source_partner_id:0
 msgid "Source Partner"
 msgstr "Alınan İş Ortağı"
@@ -587,7 +680,7 @@ msgid "Supplier Reject Debit Note"
 msgstr "Tedarikçi Karşılıksız Ödeme Notu"
 
 #. module: account_check
-#: code:addons/account_check/models/account_check.py:237
+#: code:addons/account_check/models/account_check.py:321
 #, python-format
 msgid "The Check must be in draft state for unlink !"
 msgstr "Çek/senet sadece taslak durumunda silinebilir !"
@@ -601,20 +694,22 @@ msgid ""
 msgstr "Vadeli çek/senede vade tarihi girilmesi zorunludur."
 
 #. module: account_check
-#: code:addons/account_check/wizard/check_action.py:62
+#: code:addons/account_check/wizard/check_action.py:67
 #, python-format
 msgid "The selected checks must be in handed state."
 msgstr "Seçilenler ciro durumunda olmalıdır"
 
 #. module: account_check
-#: code:addons/account_check/wizard/check_action.py:56
+#: code:addons/account_check/wizard/check_action.py:60
+#: code:addons/account_check/wizard/check_action.py:74
 #, python-format
 msgid "The selected checks must be in holding state."
 msgstr "Seçilenler portföyde durumunda olmalıdır."
 
 #. module: account_check
-#: selection:account.journal,check_type:0
-msgid "Third"
+#: code:addons/account_check/models/account.py:22
+#, python-format
+msgid "Third Check"
 msgstr ""
 
 #. module: account_check
@@ -643,32 +738,38 @@ msgid "To Draft"
 msgstr "Taslak Yap"
 
 #. module: account_check
-#: code:addons/account_check/models/account_check.py:299
+#: code:addons/account_check/models/account_check.py:395
 #, python-format
 msgid "To cancel a debit you must first delete Debit Account Move!"
 msgstr "Ödemeyi iptal etmek için önce Ödeme Muhasebe Hareketini silmelisiniz!"
 
 #. module: account_check
-#: code:addons/account_check/models/account_check.py:308
+#: code:addons/account_check/models/account_check.py:405
 #, python-format
 msgid "To cancel a deposit you must first delete the Deposit Account Move!"
 msgstr "Bankaya vermeyi iptal etmek için önce Bankaya Yatırma Muhasebe Hareketini silmelisiniz!"
 
 #. module: account_check
-#: code:addons/account_check/models/account_check.py:290
+#: code:addons/account_check/models/account_check.py:415
+#, python-format
+msgid "To cancel a deposit you must first delete the Return Account Move!"
+msgstr ""
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:385
 #, python-format
 msgid "To cancel a rejection you must first delete Expense Account Move!"
 msgstr "Karşılıksızı iptal etmek için önce Masraf Muhasebe Hareketini silmelisiniz!"
 
 #. module: account_check
-#: code:addons/account_check/models/account_check.py:284
+#: code:addons/account_check/models/account_check.py:377
 #, python-format
 msgid ""
 "To cancel a rejection you must first delete the customer reject debit note!"
 msgstr "Karşılıksızı iptal etmek için önce Müşteri Karşılıksız Muhasebe Hareketini silmelisiniz!"
 
 #. module: account_check
-#: code:addons/account_check/models/account_check.py:287
+#: code:addons/account_check/models/account_check.py:381
 #, python-format
 msgid ""
 "To cancel a rejection you must first delete the supplier reject debit note!"
@@ -703,11 +804,6 @@ msgid "User"
 msgstr "Kullanıcı"
 
 #. module: account_check
-#: field:account.check,vat:0
-msgid "Vat"
-msgstr ""
-
-#. module: account_check
 #: field:account.check,voucher_id:0
 msgid "Voucher"
 msgstr "Makbuz"
@@ -725,46 +821,58 @@ msgid "Website communication history"
 msgstr "Websitesi iletişim geçmişi"
 
 #. module: account_check
-#: code:addons/account_check/models/account_checkbook.py:102
+#: code:addons/account_check/models/account_checkbook.py:114
 #, python-format
 msgid "You can drop the checkbook(s) only in draft state !"
 msgstr "Sadece taslak durumundaki çek/senet defterleri silinebilir !"
 
 #. module: account_check
-#: code:addons/account_check/models/account_voucher.py:104
+#: code:addons/account_check/models/account_voucher.py:76
 #, python-format
 msgid ""
-"You can not cancel a voucher thas has delivered checks in states other than "
-"\"handed\". First try to change check state."
+"You can not cancel handed third checks in states other than \"handed\". "
+"First try to change check state."
 msgstr ""
 
 #. module: account_check
-#: code:addons/account_check/models/account_voucher.py:100
+#: code:addons/account_check/models/account_check.py:437
 #, python-format
 msgid ""
-"You can not cancel a voucher thas has issue checks in states other than "
-"\"draft or \"handed\". First try to change check state."
+"You can not cancel issue checks in states other than \"draft or \"handed\". "
+"First try to change check state."
 msgstr ""
 
 #. module: account_check
-#: code:addons/account_check/models/account_voucher.py:96
+#: code:addons/account_check/models/account_check.py:443
 #, python-format
 msgid ""
-"You can not cancel a voucher thas has received third checks in states other "
-"than \"draft or \"holding\". First try to change check state."
+"You can not cancel third checks in states other than \"draft or \"holding\"."
+" First try to change check state."
 msgstr ""
 
 #. module: account_check
-#: code:addons/account_check/wizard/check_action.py:58
+#: code:addons/account_check/models/account_check.py:447
+#, python-format
+msgid "You can not cancel third checks that are being used on payments"
+msgstr ""
+
+#. module: account_check
+#: code:addons/account_check/wizard/check_action.py:69
 #, python-format
 msgid "You can not debit a Third Check."
 msgstr "Alınan bir çek/senedi ödeyemezsiniz."
 
 #. module: account_check
-#: code:addons/account_check/wizard/check_action.py:64
+#: code:addons/account_check/wizard/check_action.py:62
 #, python-format
 msgid "You can not deposit a Issue Check."
 msgstr "Verilen bir çek/senedi bankaya veremezsiniz."
+
+#. module: account_check
+#: code:addons/account_check/wizard/check_action.py:77
+#, python-format
+msgid "You can not return a Issue Check."
+msgstr ""
 
 #. module: account_check
 #: help:account.checkbook,padding:0
@@ -774,7 +882,13 @@ msgid ""
 msgstr "Numaranın solunu otomatik olarak dolgu adedi kadar '0' ile doldurur."
 
 #. module: account_check
+#: view:account.change.check:account_check.account_change_check_form_view
+msgid "or"
+msgstr ""
+
+#. module: account_check
 #: view:account.voucher:account_check.view_vendor_payment_check_form
 #: view:account.voucher:account_check.view_vendor_receipt_check_form
-msgid "{'invisible':[('validate_only_checks','=', True)]}"
+#: view:account.voucher:account_check.view_vendor_receipt_dialog_form
+msgid "{'invisible':[('payment_subtype','!=', False)]}"
 msgstr ""

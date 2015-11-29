@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: odoo-addons (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 15:25+0000\n"
-"PO-Revision-Date: 2015-09-09 13:57+0000\n"
+"POT-Creation-Date: 2015-10-22 13:44+0000\n"
+"PO-Revision-Date: 2015-10-22 13:47+0000\n"
 "Last-Translator: Juan Jose Scarafia <scarafia.juanjose@gmail.com>\n"
 "Language-Team: Spanish (Argentina) (http://www.transifex.com/adhoc/ingadhoc-odoo-addons-8-0/language/es_AR/)\n"
 "MIME-Version: 1.0\n"
@@ -25,14 +25,14 @@ msgid ""
 msgstr "Producto para ajuste de cambio cuando se factura en una moneda distinta a la de la orden de venta"
 
 #. module: account_sale_different_currency
-#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:153
+#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:139
 #, python-format
 msgid "Advance of %s %%"
 msgstr ""
 
 #. module: account_sale_different_currency
-#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:170
-#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:173
+#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:154
+#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:157
 #, python-format
 msgid "Advance of %s %s"
 msgstr ""
@@ -43,13 +43,20 @@ msgid "Companies"
 msgstr "Compañías"
 
 #. module: account_sale_different_currency
-#: code:addons/account_sale_different_currency/sale.py:70
-#: code:addons/account_sale_different_currency/sale.py:87
-#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:80
-#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:133
-#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:137
+#: code:addons/account_sale_different_currency/sale.py:91
+#: code:addons/account_sale_different_currency/sale.py:108
+#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:119
+#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:123
 #, python-format
 msgid "Configuration Error!"
+msgstr ""
+
+#. module: account_sale_different_currency
+#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:68
+#, python-format
+msgid ""
+"Configuration Error!\n"
+"If Invoice in different Currency you can not select 'Percentage' or 'Some order lines'."
 msgstr ""
 
 #. module: account_sale_different_currency
@@ -63,14 +70,7 @@ msgid "Default Advance Product"
 msgstr "Producto de Adelanto por Defecto"
 
 #. module: account_sale_different_currency
-#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:81
-#, python-format
-msgid ""
-"If Invoice in different Currency you can not select 'Percentage' or 'Some "
-"order lines'."
-msgstr ""
-
-#. module: account_sale_different_currency
+#: help:product.pricelist,invoice_in_different_currency_id:0
 #: help:sale.order,different_currency_id:0
 msgid ""
 "If you want the invoice in a different currency from the sale order, please "
@@ -78,7 +78,7 @@ msgid ""
 msgstr "Si quiere facturar en una moneda distinta a la de la orden de venta, por favor seleccione una moneda"
 
 #. module: account_sale_different_currency
-#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:143
+#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:129
 #, python-format
 msgid "Incorrect Data"
 msgstr ""
@@ -94,11 +94,6 @@ msgid "Invoice Currency"
 msgstr "Moneda de Factura"
 
 #. module: account_sale_different_currency
-#: field:sale.advance.payment.inv,invoice_currency_amount:0
-msgid "Invoice Currency Advance Amount"
-msgstr "Monto de Adelanto en Moneda de Factura"
-
-#. module: account_sale_different_currency
 #: field:account.invoice,invoice_currency_rate:0
 #: field:sale.advance.payment.inv,invoice_currency_rate:0
 msgid "Invoice Currency Rate"
@@ -110,6 +105,7 @@ msgid "Invoice Line"
 msgstr "Línea de factura"
 
 #. module: account_sale_different_currency
+#: field:product.pricelist,invoice_in_different_currency_id:0
 #: field:sale.order,different_currency_id:0
 msgid "Invoice in different Currency?"
 msgstr "Facturar en una moneda distinta?"
@@ -118,6 +114,11 @@ msgstr "Facturar en una moneda distinta?"
 #: view:sale.order:account_sale_different_currency.view_order_form
 msgid "Invoices"
 msgstr "Facturas"
+
+#. module: account_sale_different_currency
+#: model:ir.model,name:account_sale_different_currency.model_product_pricelist
+msgid "Pricelist"
+msgstr ""
 
 #. module: account_sale_different_currency
 #: field:account.invoice,sale_currency_id:0
@@ -145,26 +146,26 @@ msgid "Sales Order Line"
 msgstr "Línea pedido de venta"
 
 #. module: account_sale_different_currency
-#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:144
+#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:130
 #, python-format
 msgid "The value of Advance Amount must be positive."
 msgstr ""
 
 #. module: account_sale_different_currency
-#: code:addons/account_sale_different_currency/sale.py:71
+#: code:addons/account_sale_different_currency/sale.py:92
 #, python-format
 msgid "There is no Currency Adjust Product defined for the Company."
 msgstr ""
 
 #. module: account_sale_different_currency
-#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:134
+#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:120
 #, python-format
 msgid "There is no income account defined as global property."
 msgstr ""
 
 #. module: account_sale_different_currency
-#: code:addons/account_sale_different_currency/sale.py:88
-#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:138
+#: code:addons/account_sale_different_currency/sale.py:109
+#: code:addons/account_sale_different_currency/wizard/sale_make_invoice_advance.py:124
 #, python-format
 msgid "There is no income account defined for this product: \"%s\" (id:%d)."
 msgstr ""
@@ -173,11 +174,6 @@ msgstr ""
 #: field:account.invoice.line,sale_currency_price_unit:0
 msgid "Unit Price in SO Currency"
 msgstr "Precio Unitario en Moneda de OV"
-
-#. module: account_sale_different_currency
-#: view:sale.advance.payment.inv:account_sale_different_currency.view_sale_advance_payment_inv
-msgid "on_change_currency_amount(invoice_currency_rate,amount)"
-msgstr "on_change_currency_amount(invoice_currency_rate,amount)"
 
 #. module: account_sale_different_currency
 #: view:account.invoice:account_sale_different_currency.view_account_invoice_tree

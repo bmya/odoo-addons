@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Product Sale Price By Margin',
-    'version': '8.0.0.1.0',
+    'version': '8.0.0.2.0',
     'category': 'Product',
     'sequence': 14,
     'summary': '',
@@ -34,7 +34,11 @@ Product Sale Price By Margin
     'images': [
     ],
     'depends': [
-        'product_replenishment_cost',
+        # we make dependant on this module because it adds rep cost field
+        # on prod template. TODO this mods should go to
+        # product_replenishment_cost module
+        'product_replenishment_cost_currency',
+        # 'product_replenishment_cost',
     ],
     'data': ['product_view.xml'
              ],
