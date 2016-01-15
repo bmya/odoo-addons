@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: odoo-addons (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 23:57+0000\n"
-"PO-Revision-Date: 2015-09-01 18:00+0000\n"
+"POT-Creation-Date: 2016-01-05 14:24+0000\n"
+"PO-Revision-Date: 2015-12-29 18:53+0000\n"
 "Last-Translator: Juan Jose Scarafia <scarafia.juanjose@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/adhoc/ingadhoc-odoo-addons-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -25,12 +25,12 @@ msgstr "Puede modificar precios"
 #. module: price_security
 #: field:res.users.discount_restriction,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Creado por"
 
 #. module: price_security
 #: field:res.users.discount_restriction,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Creadon en"
 
 #. module: price_security
 #: model:ir.model,name:price_security.model_res_users_discount_restriction
@@ -50,7 +50,7 @@ msgstr ""
 #. module: price_security
 #: field:res.users.discount_restriction,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: price_security
 #: help:product.template,can_modify_prices:0
@@ -67,12 +67,12 @@ msgstr "Línea de factura"
 #. module: price_security
 #: field:res.users.discount_restriction,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Last Updated by"
 
 #. module: price_security
 #: field:res.users.discount_restriction,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Last Updated on"
 
 #. module: price_security
 #: field:res.users.discount_restriction,max_discount:0
@@ -92,7 +92,7 @@ msgstr "Lista de Precios"
 #. module: price_security
 #: model:ir.model,name:price_security.model_product_template
 msgid "Product Template"
-msgstr ""
+msgstr "Plantilla de producto"
 
 #. module: price_security
 #: model:res.groups,name:price_security.group_restrict_prices
@@ -105,7 +105,7 @@ msgid "Sales Order Line"
 msgstr "Línea pedido de venta"
 
 #. module: price_security
-#: code:addons/price_security/models/res_users.py:52
+#: code:addons/price_security/models/res_users.py:63
 #, python-format
 msgid ""
 "The applied discount is out of range with respect to the allowed. The "
@@ -120,10 +120,10 @@ msgstr "Usuario"
 #. module: price_security
 #: model:ir.model,name:price_security.model_res_users
 msgid "Users"
-msgstr ""
+msgstr "Usuarios"
 
 #. module: price_security
-#: code:addons/price_security/models/res_users.py:49
+#: code:addons/price_security/models/res_users.py:54
 #, python-format
 msgid "You can not give any discount greater than pricelist discounts"
 msgstr ""

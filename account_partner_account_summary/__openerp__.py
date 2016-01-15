@@ -20,11 +20,12 @@
 ##############################################################################
 {
     'name': 'Partner Account Summary',
-    'version': '8.0.1.0.1',
+    'version': '8.0.1.1.2',
     'description': """Partner Account Summary""",
     'category': 'Aeroo Reporting',
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
+    'license': 'AGPL-3',
     'depends': [
         'account',
         'report_aeroo',

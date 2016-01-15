@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: odoo-addons (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-22 13:44+0000\n"
+"POT-Creation-Date: 2016-01-05 13:54+0000\n"
 "PO-Revision-Date: 2015-09-10 01:36+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Catalan (http://www.transifex.com/adhoc/ingadhoc-odoo-addons-8-0/language/ca/)\n"
@@ -117,7 +117,7 @@ msgstr ""
 #. module: account_transfer
 #: selection:account.transfer,state:0
 msgid "Draft"
-msgstr ""
+msgstr "Esborrany"
 
 #. module: account_transfer
 #: field:account.transfer,message_follower_ids:0

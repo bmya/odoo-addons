@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: odoo-addons (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 23:57+0000\n"
-"PO-Revision-Date: 2015-09-01 18:00+0000\n"
+"POT-Creation-Date: 2016-01-05 14:24+0000\n"
+"PO-Revision-Date: 2016-01-05 13:48+0000\n"
 "Last-Translator: Juan Jose Scarafia <scarafia.juanjose@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/adhoc/ingadhoc-odoo-addons-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -31,18 +31,18 @@ msgstr ""
 #: field:product.product_catalog_report,create_uid:0
 #: field:product_catalog,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Creado por"
 
 #. module: product_catalog_aeroo_report
 #: field:product.product_catalog_report,create_date:0
 #: field:product_catalog,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Creadon en"
 
 #. module: product_catalog_aeroo_report
 #: field:product.product_catalog_report,id:0 field:product_catalog,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: product_catalog_aeroo_report
 #: field:product.product_catalog_report,include_sub_categories:0
@@ -53,13 +53,13 @@ msgstr ""
 #: field:product.product_catalog_report,write_uid:0
 #: field:product_catalog,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Last Updated by"
 
 #. module: product_catalog_aeroo_report
 #: field:product.product_catalog_report,write_date:0
 #: field:product_catalog,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Last Updated on"
 
 #. module: product_catalog_aeroo_report
 #: field:product.product_catalog_report,name:0
@@ -95,7 +95,7 @@ msgstr ""
 #. module: product_catalog_aeroo_report
 #: selection:product.product_catalog_report,product_type:0
 msgid "Product"
-msgstr ""
+msgstr "Producto"
 
 #. module: product_catalog_aeroo_report
 #: model:ir.actions.act_window,name:product_catalog_aeroo_report.action_product_catalog
@@ -155,7 +155,7 @@ msgstr ""
 #. module: product_catalog_aeroo_report
 #: selection:product.product_catalog_report,product_type:0
 msgid "Product Template"
-msgstr ""
+msgstr "Plantilla de producto"
 
 #. module: product_catalog_aeroo_report
 #: field:product.product_catalog_report,product_type:0

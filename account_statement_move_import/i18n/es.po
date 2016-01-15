@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: odoo-addons (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-22 13:44+0000\n"
-"PO-Revision-Date: 2015-10-22 14:35+0000\n"
+"POT-Creation-Date: 2016-01-05 13:54+0000\n"
+"PO-Revision-Date: 2015-12-29 19:00+0000\n"
 "Last-Translator: Juan Jose Scarafia <scarafia.juanjose@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/adhoc/ingadhoc-odoo-addons-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -80,6 +80,11 @@ msgid "Import Journal Items"
 msgstr "Importar Apuntes Contables"
 
 #. module: account_statement_move_import
+#: field:account.bank.statement.line,imported_line_id:0
+msgid "Imported Move Line"
+msgstr ""
+
+#. module: account_statement_move_import
 #: code:addons/account_statement_move_import/wizard/account_statement_move_import_wizard.py:94
 #, python-format
 msgid ""
@@ -94,6 +99,7 @@ msgstr "La línea importada debe tener  \"statement_id\" == False"
 
 #. module: account_statement_move_import
 #: help:account.bank.statement.line,imported:0
+#: help:account.bank.statement.line,imported_line_id:0
 msgid ""
 "Imported lines are the ones imported by the \"Import Journal Items\" wizard."
 " They have some special behaviour, for eg. you can not cancel them from here"
@@ -158,7 +164,7 @@ msgid "Total Debit"
 msgstr "Total Débito"
 
 #. module: account_statement_move_import
-#: code:addons/account_statement_move_import/account.py:36
+#: code:addons/account_statement_move_import/account.py:41
 #, python-format
 msgid ""
 "You can not cancel an Accounting Entry that is linked to a statement. You "
@@ -166,7 +172,7 @@ msgid ""
 msgstr "No puede cancelar un Asiento que esta ligado a un Extracto. Debe cancelar o borrar las líneas desde el extracto primero. Extractos Relacionados: '%s'"
 
 #. module: account_statement_move_import
-#: code:addons/account_statement_move_import/account.py:74
+#: code:addons/account_statement_move_import/account.py:93
 #, python-format
 msgid ""
 "You can not cancel line \"%s\" as it has been imported with \"Import Journal"
